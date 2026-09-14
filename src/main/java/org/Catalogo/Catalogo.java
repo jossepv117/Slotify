@@ -92,7 +92,7 @@ public class Catalogo {
   }
 
   public void ordenarProductosPorNombre() {
-
+    // metodo de bubble sort
     for (int i = 0; i < numeroActualProductos - 1; i++) {
       for (int j = 0; j < numeroActualProductos - 1 - i; j++) {
         Producto temp;
