@@ -41,6 +41,10 @@ public class Main {
      * catalogo.mostrarProductos();
      * 
      */
+    
+    System.out.println("PRUEBA DE ALMACEN");
+
+    System.out.println("DIME CUAL QUIERES QUE SEA LAS FILAS DE TU ALMACEN:");
 
   }
 }
