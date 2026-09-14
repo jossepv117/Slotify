@@ -29,4 +29,23 @@ public class Almacen {
       return INSTANCIA;
     }
   }
+
+  public void agregarProducto(int fila, int columna, Producto Producto) {
+    almacen[fila][columna] = Producto;
+  }
+
+  public void construirAlmacen(int fila, int columnas, int numeroPasillos) {
+    int columnasDisponibles = columnas - 1;
+    int filasDisponibles = filas - 1;
+
+    // crear pasillos y paredes
+
+    for (int i = 0; i < almacen.length; i++) {
+      for (int j = 0; i < almacen[i].length; j++) {
+        if (i == 0 || i == almacen.length - 1 || j == 0 || j == almacen[i].length - 1) {
+          almacen[i][j] = 0;
+        }
+      }
+    }
+  }
 }

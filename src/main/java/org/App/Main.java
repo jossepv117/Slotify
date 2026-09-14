@@ -2,6 +2,7 @@ package org.App;
 
 import org.Catalogo.Producto;
 import org.Catalogo.SharedScanner;
+import org.Catalogo.Almacen;
 import org.Catalogo.Catalogo;
 import org.Catalogo.Utils;
 import java.util.Scanner;
@@ -41,10 +42,19 @@ public class Main {
      * catalogo.mostrarProductos();
      * 
      */
-    
+
     System.out.println("PRUEBA DE ALMACEN");
 
     System.out.println("DIME CUAL QUIERES QUE SEA LAS FILAS DE TU ALMACEN:");
 
+    int filas = sc.nextInt();
+
+    System.out.println();
+
+    System.out.println("DIME CUÁNTAS COLUMNAS QUIERES QUE TENGA TU ALMACEN:");
+
+    int columnas = sc.nextInt();
+
+    Almacen almacen = Almacen.getInstancia(filas, columnas);
   }
 }
