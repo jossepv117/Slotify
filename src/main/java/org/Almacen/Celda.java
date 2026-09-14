@@ -15,4 +15,8 @@ public class Celda {
     return producto;
   }
 
+  public EstadoProducto getEstado() {
+    return estado;
+  }
+
 }
