@@ -80,6 +80,7 @@ public class Catalogo {
 
   }
 
+  // Busqueda lineal
   public Producto buscarProducto(String nombre) {
 
     for (int i = 0; i < numeroActualProductos; i++) {
@@ -118,5 +119,9 @@ public class Catalogo {
 
   // TODO Implementar ordenamiento por peso
   public void ordenarProductosPorPeso() {
+  }
+
+  // TODO Implementar copia de catalogo
+  public void copiarCatalogo() {
   }
 }

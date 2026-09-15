@@ -8,6 +8,7 @@ public class Almacen {
   private int filas;
   private int columnas;
   private Celda[][] almacen;
+  private int pasillos;
 
   private Almacen(int filas, int columnas) {
     this.filas = filas;
@@ -32,13 +33,27 @@ public class Almacen {
     }
   }
 
+  // TODO terminar llenar almacen
   public static void llenarAlmacen() {
-
+    
+    esPar = 
     Celda[][] almacen = INSTANCIA.almacen;
     for (int i = 0; i < almacen.length; i++) {
       for (int j = 0; j < almacen[i].length; j++) {
+          
 
       }
     }
+  }
+
+  public static void agregarProducto(Producto producto, int fila, int columna) {
+    Celda[][] almacen = INSTANCIA.almacen;
+    Celda celda = new Celda(producto, EstadoProducto.OCUPADO);
+    almacen[fila][columna] = celda;
+  }
+
+  public static void eliminarProducto(int fila, int columna) {
+    Celda[][] almacen = INSTANCIA.almacen;
+    almacen[fila][columna].setEstado(EstadoProducto.VACIO);
   }
 }
