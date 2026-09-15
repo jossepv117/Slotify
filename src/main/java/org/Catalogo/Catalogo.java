@@ -107,14 +107,48 @@ public class Catalogo {
 
   // TODO Implementar ordenamiento de productos por rotacion
   public void ordenarProductosPorRotacion() {
+    //Selection sort
+    for (int i = 0; i < numeroActualProductos - 1; i++) {
+      int indiceMayor = i;
+      Producto temp;
+      for (int j = i + 1; j < numeroActualProductos; j++) {
+        if (productos[j].getRotacion() > productos[indiceMayor].getRotacion()) {
+          indiceMayor = j;
+        }
+      }
+      temp = productos[i];
+      productos[i] = productos[indiceMayor];
+      productos[indiceMayor] = temp;
+    }
   }
 
   // TODO Implementar ordenamiento por clasificacion
   public void ordenarProductosPorClasificacion() {
+    //Insertion sort
+    for (int i = 1; i < numeroActualProductos; i++) {
+      Producto actual = productos[i];
+      int j = i - 1;
+      while (j >= 0 && productos[j].getClasificacion().compareTo(actual.getClasificacion()) > 0) {
+        productos[j + 1] = productos[j];
+        j--;
+      }
+      productos[j + 1] = actual;
+    }
   }
 
   // TODO Implementar ordenamiento por peso
   public void ordenarProductosPorPeso() {
+    //Shell sort
+    for (int gap = numeroActualProductos / 2; gap > 0; gap /= 2) {
+      for (int i = gap; i < numeroActualProductos; i++) {
+        Producto actual = productos[i];
+        int j;
+        for (j = i; j >= gap && productos[j - gap].getPeso() > actual.getPeso(); j -= gap) {
+          productos[j] = productos[j - gap];
+        }
+        productos[j] = actual;
+      }
+    }
   }
 
   // TODO Implementar copia de catalogo
