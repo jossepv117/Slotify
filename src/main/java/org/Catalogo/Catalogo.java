@@ -45,14 +45,11 @@ public class Catalogo {
 
   public void eliminarProducto(String nombreProducto) {
     Producto producto = buscarProducto(nombreProducto);
-    System.out.println("Hola estoy aqui");
     if (producto == null) {
-      System.out.println("El producto no existe");
       return;
     }
     System.out.println(numeroActualProductos);
     System.out.println(producto.posicion);
-    System.out.println("el producto a eliminar es " + producto);
     for (int i = producto.posicion; i < numeroActualProductos; i++) {
       if (i == numeroActualProductos) {
         productos[i] = null;
@@ -60,7 +57,6 @@ public class Catalogo {
         return;
       }
 
-      System.out.println("estoy reemplazando el valor de " + productos[i] + " por " + productos[i + 1]);
       productos[i] = productos[i + 1];
     }
 
@@ -124,4 +120,5 @@ public class Catalogo {
   // TODO Implementar copia de catalogo
   public void copiarCatalogo() {
   }
+
 }

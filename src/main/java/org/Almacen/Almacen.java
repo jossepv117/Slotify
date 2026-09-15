@@ -35,12 +35,10 @@ public class Almacen {
 
   // TODO terminar llenar almacen
   public static void llenarAlmacen() {
-    
-    esPar = 
+
     Celda[][] almacen = INSTANCIA.almacen;
     for (int i = 0; i < almacen.length; i++) {
       for (int j = 0; j < almacen[i].length; j++) {
-          
 
       }
     }

@@ -2,7 +2,6 @@ package org.App;
 
 import org.Catalogo.Producto;
 import org.Catalogo.SharedScanner;
-import org.Catalogo.Almacen;
 import org.Catalogo.Catalogo;
 import org.Catalogo.Utils;
 import java.util.Scanner;
@@ -55,6 +54,5 @@ public class Main {
 
     int columnas = sc.nextInt();
 
-    Almacen almacen = Almacen.getInstancia(filas, columnas);
   }
 }
